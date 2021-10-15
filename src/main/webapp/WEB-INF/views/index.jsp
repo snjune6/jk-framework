@@ -52,11 +52,11 @@
                         <form id="top_search" method="post" action="#">
                             <div class="main_srch">
                                 <input type="text" name="keyword" id="top_keyword" class="word_div" size="40" value="">
-                                <input type="image" src="http://linkpt.cdn3.cafe24.com/images/m_srch_btn.jpg" name="submit" value="submit" align="absmiddle" onclick="javascript:goSearch();">
+                                <input type="image" alt="검색버튼" src="http://linkpt.cdn3.cafe24.com/images/m_srch_btn.jpg" name="submit" value="submit" align="absmiddle" onclick="javascript:goSearch();">
                             </div>
                         </form>
 
-                        <div id="word_div" name="aassddff" class="word_div" style="text-align: left; padding: 5px; overflow: hidden scroll; height: 140px; border: 1px solid rgb(220, 220, 220); position: relative; z-index: 9999; background: url('http://linkpt.cdn3.cafe24.com/images/white.jpg'); display: none;">
+                        <div id="word_div" class="word_div" style="text-align: left; padding: 5px; overflow: hidden scroll; height: 140px; border: 1px solid rgb(220, 220, 220); position: relative; z-index: 9999; background: url('http://linkpt.cdn3.cafe24.com/images/white.jpg'); display: none;">
                             <!-- 검색어 출력 -->
                         </div>
                         <div id="word_div_x" class="word_div" style="text-align:right; display:none; position:relative; z-index:9999; background:url('http://linkpt.cdn3.cafe24.com/images/white.jpg') ">
@@ -73,43 +73,43 @@
                         <ul id="gnb">
                             <li class="sitemap_btn">카테고리보기</li>
                             <li class="gnb_1">
-                                <a href="#" alt="">솔루션</a>
+                                <a href="#">솔루션</a>
                                 <p class="h_title">
                                     <span>문제해결 및 운영개선을 위한 기술기반의 제반 제품, 서비스</span>
                                 </p>
                             </li>
                             <li class="gnb_2">
-                                <a href="#" alt="">기자재</a>
+                                <a href="#">기자재</a>
                                 <p class="h_title">
                                     <span>플랜트건설 및 운영에 필요한 각종 설비 및 자재</span>
                                 </p>
                             </li>
                             <li class="gnb_3">
-                                <a href="#" alt="">긴급자재</a>
+                                <a href="#">긴급자재</a>
                                 <p class="h_title">
                                     <span>긴급한 조달을 필요로하는 기자재 정보</span>
                                 </p>
                             </li>
                             <li class="gnb_4">
-                                <a href="#" alt="">공유자재</a>
+                                <a href="#">공유자재</a>
                                 <p class="h_title">
                                     <span>타사와 공유 또는 처분이 가능한 보유자재 정보</span>
                                 </p>
                             </li>
                             <li class="gnb_5">
-                                <a href="#" alt="">EPC·유지보수</a>
+                                <a href="#">EPC·유지보수</a>
                                 <p class="h_title">
                                     <span>플랜트 EPC 및 유지보수작업에 대한 전문업체 정보</span>
                                 </p>
                             </li>
                             <li class="gnb_7">
-                                <a href="#" alt="">리크루팅</a>
+                                <a href="#">리크루팅</a>
                                 <p class="h_title">
                                     <span>플랜트 기술인력 소요정보</span>
                                 </p>
                             </li>
                             <li class="gnb_8">
-                                <a href="#" alt="">비즈니스제안</a>
+                                <a href="#">비즈니스제안</a>
                                 <p class="h_title">
                                     <span>아이디어, 사업개발, 마케팅 등 비즈니스영역 전반에 대한 제안</span>
                                 </p>
@@ -268,7 +268,7 @@
                                         <p id="m_gnb_banner">
 
                                             <a href="javascript:goBanner('8', '2', '', '공정/설비 ');">
-                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/b1e1e596a76d457ab077b8e562a9948a.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/b1e1e596a76d457ab077b8e562a9948a.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
 
                                         </p>
@@ -414,7 +414,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '안전/환경 분야별배너');">
-                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/bc528121e44a4c29810734e9653e2c4e.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/bc528121e44a4c29810734e9653e2c4e.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -509,7 +509,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '기계');">
-                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/ed9a55a19c254912affb9c577c6a1dfd.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/ed9a55a19c254912affb9c577c6a1dfd.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -774,7 +774,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '장치');">
-                                                <img src="http://linkplantec.com/upload/1/banner/0e0e495351374cbc8e71ba5abbf9074c.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/0e0e495351374cbc8e71ba5abbf9074c.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -914,7 +914,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '배관');">
-                                                <img src="http://linkplantec.com/upload/1/banner/9265521989d94b96a59c8a8dd48c4c0e.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/9265521989d94b96a59c8a8dd48c4c0e.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -1018,7 +1018,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '계기');">
-                                                <img src="http://linkplantec.com/upload/1/banner/8248a71f72ba48cb9042e845c58aa62e.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/8248a71f72ba48cb9042e845c58aa62e.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -1067,7 +1067,7 @@
                                         </li>
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '토목/건축');">
-                                                <img src="http://linkplantec.com/upload/1/banner/6997d01f7614486faa019bba09778a59.jpg" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/6997d01f7614486faa019bba09778a59.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -1188,7 +1188,7 @@
 
 
         <!-- 팝업창 (s) -->
-        <div id="divpop1" style="position: absolute; left: 120px; top: 30px; border: 3px solid rgb(0, 0, 0); padding: 0px; margin: 0px; z-index: 201; display: none;">
+        <div id="divpop1" style="position: absolute; left: 120px; top: 30px; border: 3px solid rgb(0, 0, 0); padding: 0; margin: 0; z-index: 201; display: none;">
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr>
