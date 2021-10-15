@@ -4,19 +4,17 @@ import com.link.jk.jkframework.dao.TestDao;
 import com.link.jk.jkframework.mapper.TestMapper;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 
 @Service
 public class TestService {
 
+    @Resource
     private TestMapper testMapper;
+    @Resource
     private TestDao testDao;
-
-    public TestService(TestMapper testMapper, TestDao testDao) {
-        this.testMapper = testMapper;
-        this.testDao = testDao;
-    }
 
     public List<HashMap<String, Object>> getTests() {
         return testMapper.selectTests();

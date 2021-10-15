@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.link.jk.jkframework.mapper.MenuMapper">
+
+    <select id="selectTests" resultType="hashMap">
+        SELECT '1' AS test
+    </select>
+
+    <insert id="insertMenu" parameterType="com.link.jk.jkframework.dto.MenuDto">
+        INSERT INTO TB_MENU
+        (
+            MENU_ID,
+            MENU_NM,
+            MENU_LINK,
+            MENU_ALT,
+            MENU_SORT,
+            MENU_STEP,
+            MENU_UPDATE,
+            MENU_CREATE
+        )
+        VALUES
+        (
+            #{menuId},
+            #{menuNm},
+            #{menuLink},
+            #{menuAlt},
+            #{menuSort},
+            #{menuStep},
+            CURRENT_TIMESTAMP,
+            CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <insert id="insertMenu2" parameterType="com.link.jk.jkframework.dto.MenuDto">
+        INSERT INTO TB_MENU
+        (
+            MENU_ID,
+            MENU_NM,
+            MENU_LINK,
+            MENU_ALT,
+            MENU_SORT,
+            MENU_STEP,
+            MENU_UPDATE,
+            MENU_CREATE
+        )
+        VALUES
+            (
+                #{menuId},
+                #{menuNm},
+                #{menuLink},
+                #{menuAlt},
+                #{menuSort},
+                #{menuStep},
+                CURRENT_TIMESTAMP,
+                CURRENT_TIMESTAMP
+            )
+    </insert>
+
+</mapper>
