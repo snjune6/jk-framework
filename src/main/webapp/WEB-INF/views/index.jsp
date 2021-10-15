@@ -62,7 +62,7 @@
                         <div id="word_div_x" class="word_div" style="text-align:right; display:none; position:relative; z-index:9999; background:url('http://linkpt.cdn3.cafe24.com/images/white.jpg') ">
                             <a href="#" id="word_div_close">닫기</a>
                         </div>
-                        <!--//메인 상단 검색 -->
+                        <!--//메인 상단 검색-->
                     </div>
                 </div>
             </div>
