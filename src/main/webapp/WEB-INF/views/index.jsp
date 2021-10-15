@@ -42,7 +42,7 @@
             <div class="main_t_bar_wrap">
                 <div id="main_t_bar">
                     <h1>
-                        <a href="/">
+                        <a href="<c:url value="/"/>">
                             <img src="http://linkpt.cdn3.cafe24.com/logo.jpg" alt="로고">
                         </a>
                     </h1>
