@@ -20,19 +20,15 @@
 
 <!-- wrapper -->
 <div id="wrapper">
-
     <!-- container -->
     <div id="container">
 
         <!-- header -->
         <div id="header">
 
-
             <div id="header_in" style="display: block;">
-
                 <div class="t_menu_wrap">
                     <ul class="">
-
                         <!-- 비로그인 시 -->
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
@@ -63,16 +59,11 @@
                         <div id="word_div" name="aassddff" class="word_div" style="text-align: left; padding: 5px; overflow: hidden scroll; height: 140px; border: 1px solid rgb(220, 220, 220); position: relative; z-index: 9999; background: url('http://linkpt.cdn3.cafe24.com/images/white.jpg'); display: none;">
                             <!-- 검색어 출력 -->
                         </div>
-
                         <div id="word_div_x" class="word_div" style="text-align:right; display:none; position:relative; z-index:9999; background:url('http://linkpt.cdn3.cafe24.com/images/white.jpg') ">
                             <a href="#" id="word_div_close">닫기</a>
                         </div>
-
-
                         <!--//메인 상단 검색 -->
                     </div>
-
-
                 </div>
             </div>
 
@@ -81,17 +72,12 @@
                     <div id="gnb_con" class="gnb">
                         <ul id="gnb">
                             <li class="sitemap_btn">카테고리보기</li>
-
-
                             <li class="gnb_1">
                                 <a href="#" alt="">솔루션</a>
                                 <p class="h_title">
                                     <span>문제해결 및 운영개선을 위한 기술기반의 제반 제품, 서비스</span>
                                 </p>
                             </li>
-
-
-
                             <li class="gnb_2">
                                 <a href="#" alt="">기자재</a>
                                 <p class="h_title">
@@ -104,36 +90,30 @@
                                     <span>긴급한 조달을 필요로하는 기자재 정보</span>
                                 </p>
                             </li>
-
                             <li class="gnb_4">
                                 <a href="#" alt="">공유자재</a>
                                 <p class="h_title">
                                     <span>타사와 공유 또는 처분이 가능한 보유자재 정보</span>
                                 </p>
                             </li>
-
                             <li class="gnb_5">
                                 <a href="#" alt="">EPC·유지보수</a>
                                 <p class="h_title">
                                     <span>플랜트 EPC 및 유지보수작업에 대한 전문업체 정보</span>
                                 </p>
                             </li>
-
                             <li class="gnb_7">
                                 <a href="#" alt="">리크루팅</a>
                                 <p class="h_title">
                                     <span>플랜트 기술인력 소요정보</span>
                                 </p>
                             </li>
-
                             <li class="gnb_8">
                                 <a href="#" alt="">비즈니스제안</a>
                                 <p class="h_title">
                                     <span>아이디어, 사업개발, 마케팅 등 비즈니스영역 전반에 대한 제안</span>
                                 </p>
                             </li>
-
-
                         </ul>
                     </div>
 
@@ -142,7 +122,7 @@
                         <div class="m_visual_btn">
                             <ul class="">
                                 <li>
-                                    <a href="#" class="mvn_01">공정/설비종합357</a>
+                                    <a href="#" class="mvn_01">공정/설비종합</a>
                                     <ul class="m_2depth">
                                         <p class="category_title">공정/설비종합</p>
                                         <li class="">
@@ -1278,46 +1258,62 @@
             <div class="m_visual01">
                 <div class="main_slide_wrap">
                     <div class="main_slider">
-                        <!--
-								<span id="slider-prev"></span>
-								<span id="slider-next"></span>
-		 					-->
-                        <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 400px;"><ul id="slider1" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-2172px, 0px, 0px);"><li onclick="javascript:goBanner('2', '2', '', '링크플랜텍소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;" class="bx-clone">
-                            <img src="http://linkplantec.com/upload/1/banner/d1fae95be7064414bff39cb941388b35.jpg">
-                        </li>
+                        <div class="bx-wrapper" style="max-width: 100%;">
+                            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 400px;">
+                                <ul id="slider1" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-2172px, 0px, 0px);">
+                                    <li onclick="javascript:goBanner('2', '2', '', '링크플랜텍소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;" class="bx-clone">
+                                        <img src="http://linkplantec.com/upload/1/banner/d1fae95be7064414bff39cb941388b35.jpg">
+                                    </li>
+                                    <li onclick="javascript:goBanner('2', '2', '#', 'koins');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
+                                        <img src="http://linkplantec.com/upload/1/banner/451f53d2460c460ab72f98b95630bfcb.jpg">
+                                    </li>
+                                    <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
 
+                                    <li onclick="javascript:goBanner('2', '2', '', '국일인토트');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
+                                        <img src="http://linkplantec.com/upload/1/banner/60b47d139d4c4e3b91a0edc89c995d88.jpg">
+                                    </li>
+                                    <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
 
+                                    <li onclick="javascript:goBanner('2', '2', '#', '유니콘벨브소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
+                                        <img src="http://linkplantec.com/upload/1/banner/b35628ba07d149a6a7e7cde934e54426.jpg">
+                                    </li>
+                                    <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
 
-                            <li onclick="javascript:goBanner('2', '2', '#', 'koins');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
-                                <img src="http://linkplantec.com/upload/1/banner/451f53d2460c460ab72f98b95630bfcb.jpg">
-                            </li>
-                            <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
+                                    <li onclick="javascript:goBanner('2', '2', '', '링크플랜텍소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
+                                        <img src="http://linkplantec.com/upload/1/banner/94a53fee4ead487eb47242d69ed1a7cb.jpg">
+                                    </li>
+                                    <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
 
-                            <li onclick="javascript:goBanner('2', '2', '', '국일인토트');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
-                                <img src="http://linkplantec.com/upload/1/banner/60b47d139d4c4e3b91a0edc89c995d88.jpg">
-                            </li>
-                            <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
+                                    <li onclick="javascript:goBanner('2', '2', '', '링크플랜텍소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
+                                        <img src="http://linkplantec.com/upload/1/banner/d1fae95be7064414bff39cb941388b35.jpg">
+                                    </li>
+                                    <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
+                                    <li onclick="javascript:goBanner('2', '2', '#', 'koins');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;" class="bx-clone">
+                                        <img src="http://linkplantec.com/upload/1/banner/451f53d2460c460ab72f98b95630bfcb.jpg">
+                                    </li>
+                                </ul>
+                            </div>
 
-                            <li onclick="javascript:goBanner('2', '2', '#', '유니콘벨브소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
-                                <img src="http://linkplantec.com/upload/1/banner/b35628ba07d149a6a7e7cde934e54426.jpg">
-                            </li>
-                            <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
-
-                            <li onclick="javascript:goBanner('2', '2', '', '링크플랜텍소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
-                                <img src="http://linkplantec.com/upload/1/banner/94a53fee4ead487eb47242d69ed1a7cb.jpg">
-                            </li>
-                            <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
-
-                            <li onclick="javascript:goBanner('2', '2', '', '링크플랜텍소개');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;">
-                                <img src="http://linkplantec.com/upload/1/banner/d1fae95be7064414bff39cb941388b35.jpg">
-                            </li>
-                            <!-- <li><img src="http://linkpt.cdn3.cafe24.com/images/main_img_01.jpg"></li> -->
-
-
-
-                            <li onclick="javascript:goBanner('2', '2', '#', 'koins');" style="cursor: pointer; float: left; list-style: none; position: relative; width: 1086px;" class="bx-clone">
-                                <img src="http://linkplantec.com/upload/1/banner/451f53d2460c460ab72f98b95630bfcb.jpg">
-                            </li></ul></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link active">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div></div></div></div>
+                            <div class="bx-controls bx-has-pager">
+                                <div class="bx-pager bx-default-pager">
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="0" class="bx-pager-link">1</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="1" class="bx-pager-link active">2</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="2" class="bx-pager-link">3</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="3" class="bx-pager-link">4</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="4" class="bx-pager-link">5</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1336,37 +1332,27 @@
 
                     <!-- 상품 탭 -->
                     <ul class="tab_title ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
-
-
                         <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true">
                             <a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">공정/설비종합</a>
                         </li>
-
                         <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
                             <a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">안전/환경</a>
                         </li>
-
                         <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false">
                             <a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">회전기계</a>
                         </li>
-
                         <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-4" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false">
                             <a href="#tabs-4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">장치/배관</a>
                         </li>
-
                         <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-5" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false">
                             <a href="#tabs-5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">전기</a>
                         </li>
-
                         <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-6" aria-labelledby="ui-id-6" aria-selected="false" aria-expanded="false">
                             <a href="#tabs-6" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">계장</a>
                         </li>
-
                         <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-7" aria-labelledby="ui-id-7" aria-selected="false" aria-expanded="false">
                             <a href="#tabs-7" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-7">토목/건축</a>
                         </li>
-
-
                     </ul>
 
                     <!-- 상품 탭 -->
@@ -1989,3 +1975,4 @@
 <!-- //footer -->
 </body>
 </html>
+
