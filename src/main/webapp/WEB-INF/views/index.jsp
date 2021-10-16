@@ -11,7 +11,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/lib/simplePagination/simplePagination.css">
 
-    <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/default.css">
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/join/join.css">
 </head>
@@ -72,48 +72,15 @@
                     <div id="gnb_con" class="gnb">
                         <ul id="gnb">
                             <li class="sitemap_btn">카테고리보기</li>
-                            <li class="gnb_1">
-                                <a href="#">솔루션</a>
-                                <p class="h_title">
-                                    <span>문제해결 및 운영개선을 위한 기술기반의 제반 제품, 서비스</span>
-                                </p>
-                            </li>
-                            <li class="gnb_2">
-                                <a href="#">기자재</a>
-                                <p class="h_title">
-                                    <span>플랜트건설 및 운영에 필요한 각종 설비 및 자재</span>
-                                </p>
-                            </li>
-                            <li class="gnb_3">
-                                <a href="#">긴급자재</a>
-                                <p class="h_title">
-                                    <span>긴급한 조달을 필요로하는 기자재 정보</span>
-                                </p>
-                            </li>
-                            <li class="gnb_4">
-                                <a href="#">공유자재</a>
-                                <p class="h_title">
-                                    <span>타사와 공유 또는 처분이 가능한 보유자재 정보</span>
-                                </p>
-                            </li>
-                            <li class="gnb_5">
-                                <a href="#">EPC·유지보수</a>
-                                <p class="h_title">
-                                    <span>플랜트 EPC 및 유지보수작업에 대한 전문업체 정보</span>
-                                </p>
-                            </li>
-                            <li class="gnb_7">
-                                <a href="#">리크루팅</a>
-                                <p class="h_title">
-                                    <span>플랜트 기술인력 소요정보</span>
-                                </p>
-                            </li>
-                            <li class="gnb_8">
-                                <a href="#">비즈니스제안</a>
-                                <p class="h_title">
-                                    <span>아이디어, 사업개발, 마케팅 등 비즈니스영역 전반에 대한 제안</span>
-                                </p>
-                            </li>
+                            <c:forEach var="menuList" items="${menuFullList}" varStatus="status">
+                                <li class="gnb_1">
+                                    <a href="${menuList.menuLink}">${menuList.menuNm}</a>
+                                    <p class="h_title">
+                                        <span>${menuList.menuAlt}</span>
+                                    </p>
+                                </li>
+                            </c:forEach>
+
                         </ul>
                     </div>
 

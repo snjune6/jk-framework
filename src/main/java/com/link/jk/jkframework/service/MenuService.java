@@ -22,4 +22,8 @@ public class MenuService {
         return menuMapper.insertMenu2(menuDto);
     }
 
+    public List<MenuDto> selectFullMenuList() {
+        return menuMapper.selectFullMenuList();
+    }
+
 }

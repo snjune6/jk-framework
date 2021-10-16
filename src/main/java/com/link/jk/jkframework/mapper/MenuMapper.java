@@ -14,4 +14,6 @@ public interface MenuMapper {
     int insertMenu(List<HashMap<String, String>> list);
 
     int insertMenu2(MenuDto menuDto);
+
+    List<MenuDto> selectFullMenuList();
 }
