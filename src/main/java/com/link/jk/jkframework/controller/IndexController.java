@@ -1,6 +1,8 @@
 package com.link.jk.jkframework.controller;
 
+import com.link.jk.jkframework.dto.CategoryDto;
 import com.link.jk.jkframework.dto.MenuDto;
+import com.link.jk.jkframework.service.CategoryService;
 import com.link.jk.jkframework.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.HashMap;
 
 @Controller
 @RequestMapping("/index")
@@ -19,13 +20,22 @@ public class IndexController {
     @Autowired
     private MenuService menuService;
 
+    @Autowired
+    private CategoryService categoryService;
+
     @GetMapping("/index")
     public String test(Model model) {
 
-        List<MenuDto> menuFullList = new ArrayList<MenuDto>();
+        // 메인메뉴
+        List<MenuDto> menuFullList;
         menuFullList = menuService.selectFullMenuList();
         model.addAttribute("menuFullList", menuFullList);
-        System.out.println(menuFullList);
+
+        // 카페고리
+        List<CategoryDto> categoryFullList;
+        categoryFullList = categoryService.selectFullCategoryList();
+        model.addAttribute("categoryFullList", categoryFullList);
+
         return "index";
     }
 
