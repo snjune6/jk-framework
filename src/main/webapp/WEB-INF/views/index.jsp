@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,8 +19,7 @@
 <body style="" class="loaded">
 
 
-<!-- wrapper -->
-<div id="wrapper">
+<!--wrapper --><div id="wrapper">
     <!-- container -->
     <div id="container">
 
@@ -29,12 +29,17 @@
             <div id="header_in" style="display: block;">
                 <div class="t_menu_wrap">
                     <ul class="">
-                        <!-- 비로그인 시 -->
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
-                        <!--비로그인 시 -->
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#" title="SITEMAP">SITEMAP</a></li>
+                        <sec:authorize access="isAnonymous()">
+                            <li><a href="<c:url value="/login" />">로그인</a></li>
+                        </sec:authorize>
+                        <sec:authorize access="isAuthenticated()">
+                            <li><a href="<c:url value="/logout" />">로그아웃</a></li>
+                            <sec:authorize access="hasAnyRole('ROLE_MEMBER')" >
+                                <li><a href="<c:url value="#" />">마이페이지</a></li>
+                            </sec:authorize>
+                        </sec:authorize>
+                        <li><a href="<c:url value="#" />">회사소개</a></li>
+                        <li><a href="<c:url value="#" />" title="SITEMAP">SITEMAP</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +47,7 @@
             <div class="main_t_bar_wrap">
                 <div id="main_t_bar">
                     <h1>
-                        <a href="<c:url value="/"/>">
+                        <a href="<c:url value="#" />">
                             <img src="http://linkpt.cdn3.cafe24.com/logo.jpg" alt="로고">
                         </a>
                     </h1>

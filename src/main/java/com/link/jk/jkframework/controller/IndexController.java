@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/index")
 public class IndexController {
 
     @Autowired
@@ -23,7 +22,7 @@ public class IndexController {
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public String test(Model model) {
 
         // 메인메뉴
