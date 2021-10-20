@@ -2,9 +2,9 @@
 ## 프로젝트 설명
 * 스프링 부트학습 및 기존 링크플랜텍 개편작업
 ## 프로젝트 환경
-* Java 8
-* gradle 7.x
-* Spring Boot 2.5.1
+* Java 1.8.0_301
+* apache-maven-3.8.2
+* Spring Boot 2.6.0-SNAPSHOT
 ## 기타 프로젝트 환경
 * jsp
 * Intellij
