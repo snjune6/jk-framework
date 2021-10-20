@@ -11,7 +11,7 @@
 
 * web또는 kcms아래 layout을 제외한 곳에 작업한다.
 ## 프로젝트 구성
-# 의존성
+### 의존성
 * spring-boot-starter-security
 * spring-boot-devtools
 * spring-security-taglibs
@@ -23,5 +23,5 @@
 * jstl
 * tomcat-embed-jasper
 * sitemesh 3.0.1
-# 그외 구성
+### 그외 구성
 * spring boot interceptor
