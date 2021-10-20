@@ -11,6 +11,17 @@
 
 * web또는 kcms아래 layout을 제외한 곳에 작업한다.
 ## 프로젝트 구성
-* spring boot security
-* spring boot sitemesh3
+# 의존성
+* spring-boot-starter-security
+* spring-boot-devtools
+* spring-security-taglibs
+* spring-boot-starter-web
+* mybatis-spring-boot-starter 2.2.0
+* lombok
+* spring-boot-starter-tomcat
+* mariadb-java-client 2.7.3
+* jstl
+* tomcat-embed-jasper
+* sitemesh 3.0.1
+# 그외 구성
 * spring boot interceptor
