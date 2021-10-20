@@ -1,7 +1,9 @@
 package com.link.jk.jkframework;
 
+import com.link.jk.jkframework.config.SiteMeshConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -21,4 +23,13 @@ public class JkFrameworkApplication {
         resolver.setSuffix(".jsp");
         return resolver;
     }
+
+    @Bean
+    public FilterRegistrationBean<SiteMeshConfig> sitemeshFilter() {
+        FilterRegistrationBean<SiteMeshConfig> filter = new FilterRegistrationBean<SiteMeshConfig>();
+        filter.setFilter(new SiteMeshConfig());
+
+        return filter;
+    }
+
 }

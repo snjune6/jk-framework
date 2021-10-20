@@ -13,42 +13,43 @@ public class MemberController {
 
     private MemberService memberService;
 
-    @GetMapping("/index")
+    @GetMapping(value = "/index")
     public String homeView() {
+        System.out.println("te23");
         return "auth/home";
     }
 
-    @GetMapping("/login")
+    @GetMapping(value = "/login")
     public String loginView() {
         return "auth/login";
     }
 
-    @GetMapping("/signup")
+    @GetMapping(value = "/signup")
     public String signupView() {
         return "auth/signup";
     }
 
-    @PostMapping("/signup")
+    @PostMapping(value = "/signup")
     public String signup(MemberDto memberDto) {
         memberService.joinUser(memberDto);
         return "redirect:/login";
     }
 
     //@PreAuthorize("hasRole('ROLE_MEMBER')")
-    @GetMapping("/member/info")
+    @GetMapping(value = "/member/info")
     public String userInfoView() {
         System.out.println("ROLE_MEMBER");
         return "auth/user_info";
     }
 
     //@PreAuthorize("hasRole('ROLE_ADMIN')")
-    @GetMapping("/admin")
+    @GetMapping(value = "/admin")
     public String adminView() {
         System.out.println("ROLE_ADMIN");
         return "auth/admin";
     }
 
-    @GetMapping("/denied")
+    @GetMapping(value = "/denied")
     public String deniedView() {
         return "auth/denied";
     }

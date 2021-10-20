@@ -1,23 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/lib/simplePagination/simplePagination.css">
-
-    <link rel="stylesheet" type="text/css" href="/static/css/default.css">
-    <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/join/join.css">
+    <title>test</title>
 </head>
-<body style="" class="loaded">
-
+<body>
 
 <!--wrapper --><div id="wrapper">
     <!-- container -->
@@ -1335,7 +1325,7 @@
                                     <li>
                                         <div class="lst-photo-wrap">
                                             <a href="#">
-                                                <img src="#" alt="상품 썸네일">
+                                                <img src="http://linkplantec.com/upload/1/product/f8e3eb36535f41e9a091871918cbc883.jpg" alt="상품 썸네일">
                                                 <div class="tit">
                                                     <p class="split">진행워터웨이</p>
                                                     <p style="margin-top: 0px;">Decontamination기술</p>

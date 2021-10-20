@@ -34,7 +34,7 @@ public class MemberService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         MemberDto memberDto = memberMapper.selectUserId(username);
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        List<GrantedAuthority> authorities = new ArrayList<>();
 
         if(memberDto != null) {
             authorities.add(new SimpleGrantedAuthority("ROLE_MEMBER"));
