@@ -10,3 +10,7 @@
 * Intellij
 
 * web또는 kcms아래 layout을 제외한 곳에 작업한다.
+## 프로젝트 구성
+* spring boot security
+* spring boot sitemesh3
+* spring boot interceptor
