@@ -8,7 +8,6 @@ public class SiteMeshConfig extends ConfigurableSiteMeshFilter {
     @Override
     protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
         builder.addDecoratorPath("/*", "/WEB-INF/decorator/defaultLayout.jsp")
-                .addExcludedPath("/auth")
                 .addExcludedPath(".json")
 
                 .setMimeTypes("text/html");

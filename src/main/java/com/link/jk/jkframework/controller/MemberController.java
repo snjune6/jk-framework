@@ -18,12 +18,12 @@ public class MemberController {
         System.out.println("te23");
         return "auth/home";
     }
-
+/*
     @GetMapping(value = "/login")
     public String loginView() {
         return "auth/login";
     }
-
+*/
     @GetMapping(value = "/signup")
     public String signupView() {
         return "auth/signup";
