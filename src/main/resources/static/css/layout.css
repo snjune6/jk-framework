@@ -273,7 +273,70 @@ a:visited {
 	text-align: left;
 }
 
-/* ���̺� */
+/*login_layout*/
+#login_wer {
+	max-width:1024px;
+	width:100%;
+	margin:5% auto;
+	padding:35px;
+	background:#f8f8f8;
+	border:1px solid #dfdfdf;
+	overflow:hidden;
+	box-sizing: border-box;
+}
+
+#login_in {
+	width:530px;
+	overflow:hidden;
+	margin:0 auto;
+}
+
+.login_name {
+	font-size:24px;
+	font-weight: bolder;
+	text-align:center;
+}
+
+.login_con {
+	font-size: 0px;
+}
+.login_con input[type='radio'] {
+	display: none;
+}
+.login_con label {
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid #eee;
+}
+.login_con input:checked + label {
+	color: #fff;
+	background: #59d;
+}
+.login_con .tab-content {
+	display: none;
+	width: 500px;
+	height: 100px;
+	border: 1px solid #eee;
+	font-size: 15px;
+	padding: 10px;
+}
+
+#tab1:checked ~ #tab-content1 {
+	display: block;
+	background-color: #f2d0d0;
+}
+
+#tab2:checked ~ #tab-content2 {
+	display: block;
+	background-color: #e8f5d2;
+}
+
+											 /* ���̺� */
 .table_type1 {
 	width: 100%;
 	border-collapse: collapse;

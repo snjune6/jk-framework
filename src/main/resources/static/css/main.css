@@ -1,6 +1,6 @@
 /*main.css*/
 body {
-	
+
 }
 
 #wrapper {
@@ -201,7 +201,7 @@ label[for=chkday] {
 
 /*메인메뉴*/
 .lastdiv {
-	
+
 }
 
 .menu_con {
@@ -295,7 +295,7 @@ label[for=chkday] {
 }
 
 #gnb>li.on, #gnb>li.active {
-	
+
 }
 
 #gnb li.gnb_1 a {
@@ -567,6 +567,7 @@ label[for=chkday] {
 	border-top: none;
 	background: none;
 }
+#m_gnb_banner a img {width: 291px; height: 400px;}
 
 .m_visual_btn li:hover ul.m_2depth {
 	width: 1086px !important;
@@ -625,9 +626,9 @@ label[for=chkday] {
 
 .m_visual_btn li ul.m_2depth li ul.m_3depth li:first-child {
 	margin-left:0px;
-	
-}
 
+}
+.m_visual_btn li ul.m_2depth li ul.m_3depth .3depth_a {text-align: left;}
 .m_visual_btn li ul.m_2depth li ul.m_3depth li a {
 	border-top: 0px solid #578bd5;
 	font-size: 15px;
@@ -1194,7 +1195,7 @@ body.gnb_1 #gnb li.gnb_1 a, body.gnb_2 #gnb li.gnb_2 a, body.gnb_3 #gnb li.gnb_3
 	position: relative;
 	display:inline-block;
 	margin-left: 35px;
-	background:#FFF; 
+	background:#FFF;
 	border:1px solid #f0f0f0;
     border-radius:4px;
 
@@ -1214,7 +1215,7 @@ body.gnb_1 #gnb li.gnb_1 a, body.gnb_2 #gnb li.gnb_2 a, body.gnb_3 #gnb li.gnb_3
 
 
 /* 갤러리 게시판 리스트 */
-.lst-photo-board li {		
+.lst-photo-board li {
     visibility:visible;
     transition:opacity 0.4s, transform 0.8s;
     transform:rotate(0.001deg);
@@ -1670,5 +1671,5 @@ body.gnb_1 #gnb li.gnb_1 a, body.gnb_2 #gnb li.gnb_2 a, body.gnb_3 #gnb li.gnb_3
 	.popView.show { z-index:9999 !important; left:50%; }
 
 	*/
-	
-	
+
+
