@@ -1,5 +1,9 @@
 package com.link.jk.jkframework.interceptor;
 
+import com.link.jk.jkframework.dto.SiteDto;
+import com.link.jk.jkframework.service.SiteService;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -7,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Enumeration;
 
-
 public class UriInterceptor implements HandlerInterceptor {
+
+    @Autowired
+    private SiteService siteService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -37,6 +43,12 @@ public class UriInterceptor implements HandlerInterceptor {
                 System.out.println("parameter key is Object");
             }
         }
+
+        SiteDto siteDto = siteService.selectSiteList();
+
+        // 사이트 정보 입력
+        if(siteDto!=null) request.setAttribute("siteDto", siteDto);
+
         return HandlerInterceptor.super.preHandle(request, response, handler);
     }
 

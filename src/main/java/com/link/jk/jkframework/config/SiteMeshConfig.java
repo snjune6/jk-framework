@@ -7,7 +7,8 @@ public class SiteMeshConfig extends ConfigurableSiteMeshFilter {
 
     @Override
     protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
-        builder.addDecoratorPath("/*", "/WEB-INF/decorator/defaultLayout.jsp")
+        builder.addDecoratorPath("/", "/WEB-INF/decorator/defaultLayout.jsp")
+                .addDecoratorPath("/kcms/*", "/WEB-INF/decorator/kcmsLayout.jsp")
                 .addExcludedPath(".json")
 
                 .setMimeTypes("text/html");
