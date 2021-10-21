@@ -31,4 +31,6 @@ public class SiteController {
 		return "kcms/site/site";
 	}
 
+
+
 }
