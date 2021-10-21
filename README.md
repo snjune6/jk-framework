@@ -23,5 +23,10 @@
 * jstl
 * tomcat-embed-jasper
 * sitemesh 3.0.1
+* log4jdbc-log4j2-jdbc4
+* spring-boot-starter-log4j2
 ### 그외 구성
 * spring boot interceptor
+
+## 구성 제외
+* spring-boot-starter-logging
