@@ -12,7 +12,7 @@
         <div id="container">
             <div class="subWrap">
                 <div id="sub_contents">
-                    <h2 class="sub_ctit">회원가입 - 회원등록</h2>
+                    <h2 class="sub_ctit">로그인</h2>
                     <div id="sub_con">
                         <h4>
                             <span class="join_tit">LOGIN</span>

@@ -14,7 +14,6 @@ public class SiteService {
     private SiteMapper siteMapper;
 
     public SiteDto selectSiteList() {
-        System.out.println("seviceecie");
         return siteMapper.selectSiteList();
     }
 

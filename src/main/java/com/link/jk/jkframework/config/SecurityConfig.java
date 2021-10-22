@@ -1,6 +1,6 @@
 package com.link.jk.jkframework.config;
 
-import com.link.jk.jkframework.service.MemberService;
+import com.link.jk.jkframework.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 //@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private MemberService memberService;
+    private UserService userService;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -37,20 +37,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 //.antMatchers("/member/**").authenticated()
                 //.antMatchers("/admin/**").authenticated()
-                .antMatchers("/member/**").hasRole("MEMBER")
+                //.antMatchers("/member/**").hasRole("MEMBER")
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/**").permitAll();
+                    .antMatchers("/jk-framework/**").hasRole("JK")
+                        .antMatchers("/**").permitAll();
 
         http.formLogin()
-                .loginPage("/login")
-                .failureUrl("/login?error=true")
-                .defaultSuccessUrl("/")
-                .permitAll();
+                .loginPage("/auth/login")
+                    .failureUrl("/login?error=true")
+                        .defaultSuccessUrl("/")
+                            .permitAll();
 
         http.logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/")
-                .invalidateHttpSession(true);
+                    .logoutSuccessUrl("/")
+                        .invalidateHttpSession(true);
 
         http.exceptionHandling()
                 .accessDeniedPage("/denied");
@@ -58,6 +59,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(memberService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(userService).passwordEncoder(passwordEncoder());
     }
 }

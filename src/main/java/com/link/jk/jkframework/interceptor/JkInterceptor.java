@@ -10,17 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Enumeration;
 
-public class UriInterceptor implements HandlerInterceptor {
+
+public class JkInterceptor implements HandlerInterceptor {
 
     @Autowired
     private SiteService siteService;
+
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         System.out.println("=========================");
-        System.out.println("UriInterceptor::preHandle");
-        System.out.println("UriInterceptor");
+        System.out.println("JkInterceptor::preHandle");
+        System.out.println("JkInterceptor");
         System.out.printf("preHandle URI : %s%n", request.getServletPath());
         System.out.println("=========================");
 
@@ -53,13 +55,13 @@ public class UriInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("UriInterceptor::postHandle");
+        System.out.println("JkInterceptor::postHandle");
         HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("UriInterceptor::afterCompletion");
+        System.out.println("JkInterceptor::afterCompletion");
         HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
     }
 }

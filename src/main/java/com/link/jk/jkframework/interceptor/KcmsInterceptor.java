@@ -1,19 +1,14 @@
 package com.link.jk.jkframework.interceptor;
 
 import com.link.jk.jkframework.dto.SiteDto;
-import com.link.jk.jkframework.mapper.SiteMapper;
-import com.link.jk.jkframework.service.MenuService;
 import com.link.jk.jkframework.service.SiteService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Enumeration;
-
 
 public class KcmsInterceptor implements HandlerInterceptor {
 

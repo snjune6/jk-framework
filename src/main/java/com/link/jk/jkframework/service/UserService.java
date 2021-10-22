@@ -1,7 +1,10 @@
 package com.link.jk.jkframework.service;
 
-import com.link.jk.jkframework.dto.MemberDto;
-import com.link.jk.jkframework.mapper.MemberMapper;
+import com.link.jk.jkframework.comm.Util;
+import com.link.jk.jkframework.config.Role;
+import com.link.jk.jkframework.dto.UserDetailDto;
+import com.link.jk.jkframework.dto.UserDto;
+import com.link.jk.jkframework.mapper.UserMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,30 +20,32 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class MemberService implements UserDetailsService {
+public class UserService implements UserDetailsService {
 
-    private MemberMapper memberMapper;
+    private UserMapper userMapper;
 
-    public Long joinUser(MemberDto memberDto) {
+    public Long joinUser(UserDetailDto userDetailDto) {
 
         // 비밀번호 암호화
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        memberDto.setPassword(passwordEncoder.encode(memberDto.getPassword()));
+        userDetailDto.setUserPw(passwordEncoder.encode(userDetailDto.getUserPw()));
+        userDetailDto.setUserRole(Role.USER.getValue());
 
-        return memberMapper.joinUser(memberDto);
+        return userMapper.joinUser(userDetailDto);
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
 
-        MemberDto memberDto = memberMapper.selectUserId(username);
+        UserDto userDto = userMapper.selectUserId(userId);
         List<GrantedAuthority> authorities = new ArrayList<>();
 
-        if(memberDto != null) {
-            authorities.add(new SimpleGrantedAuthority("ROLE_MEMBER"));
+        if(userDto != null) {
+
+            authorities.add(new SimpleGrantedAuthority(userDto.getUserRole()));
         }
 
 
-        return new User(memberDto.getUsername(), memberDto.getPassword(), authorities);
+        return new User(userDto.getUserId(), userDto.getUserPw(), authorities);
     }
 }
