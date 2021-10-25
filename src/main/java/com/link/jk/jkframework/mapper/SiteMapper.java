@@ -10,4 +10,5 @@ public interface SiteMapper {
 
 	SiteDto selectSiteList();
 
+	void updateSite(SiteDto siteDto);
 }

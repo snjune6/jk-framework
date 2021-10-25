@@ -17,4 +17,7 @@ public class SiteService {
         return siteMapper.selectSiteList();
     }
 
+	public void updateSite(SiteDto siteDto) {
+		siteMapper.updateSite(siteDto);
+	}
 }

@@ -12,4 +12,11 @@
         SELECT SITE_NAME, SITE_STATE, SITE_DOMAIN FROM tb_site
     </select>
 
+    <update id="updateSite" parameterType="hashmap">
+        UPDATE tb_site SET
+          SITE_NAME = #{siteName}
+        , SITE_STATE = #{siteState}
+        , SITE_DOMAIN = #{siteDomain}
+    </update>
+
 </mapper>

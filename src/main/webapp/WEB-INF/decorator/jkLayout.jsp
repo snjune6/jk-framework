@@ -10,6 +10,18 @@
 
 </head>
 <body>
+    <div>
+        <ul>
+            <sec:authentication property="principal" var="user"/>
+            <li><span>ID : </span><span>${user.username}</span></li>
+            <li><span>권한 : </span><span>${user.authorities}</span></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><a href="/jk-framework/site">사이트 관리</a></li>
+        </ul>
+    </div>
     <sitemesh:write property='body'/>
 </body>
 </html>

@@ -6,19 +6,33 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-    <sec:authentication property="principal" var="user"/>
-    타입 : ${user.} <br>
-    ID : ${user.username} <br>
-    PW : ${user.password}
-    <div>siteName : ${siteDto.siteName}</div>
-    <div>siteState : ${siteDto.siteState}</div>
-    <div>siteDomain : ${siteDto.siteDomain}</div>
-    <div>수정</div>
+    <form:form modelAttribute="siteDto">
+        <div class="control-group">
+            <form:label path="siteName">siteName</form:label>
+            <form:input path="siteName" />
+            <form:errors path="siteName" />
+        </div>
+        <div class="control-group">
+            <form:label path="siteState">siteState</form:label>
+            <form:radiobuttons path="siteState" items="${siteStateList}" />
+            <form:errors path="siteState" />
+        </div>
+        <div class="control-group">
+            <form:label path="siteDomain">siteDomain</form:label>
+            <form:input path="siteDomain" />
+            <form:errors path="siteDomain" />
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <form:button>수정</form:button>
+            </div>
+        </div>
+    </form:form>
 </body>
 </html>
