@@ -13,19 +13,43 @@
             <div class="subWrap">
                 <div id="sub_contents">
                     <h2 class="sub_ctit">로그인</h2>
-                    <div id="sub_con">
-                        <h4>
-                            <span class="join_tit">LOGIN</span>
+                    <div id="login_wer">
+                        <h4 class="join_tit">LOGIN<br/>
                             <span class="join_stit"> | 링플에 오신것을 환영합니다. 아이디와 비밀번호는 대소문자를 구분합니다.</span>
                         </h4>
-                        <div id="login_box">
-                            <div id="login_in">
-                                <form action="/auth/login" method="post">
-                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                                    <input type="text" name="username" placeholder="username 입력해주세요.">
-                                    <input type="password" name="password" placeholder="password를 입력해주세요.">
-                                    <button type="submit">로그인</button>
-                                </form>
+
+                        <div class="login_con">
+                            <input  id="tab1" name="tab-menu" type="radio" checked>
+                            <label for="tab1">일반회원</label>
+                            <input  id="tab2" name="tab-menu" type="radio">
+                            <label for="tab2">기업회원</label>
+                            <div id="tab-content1" class="tab-content">
+
+                                <div id="login_con_box">
+                                    <div class="login_in_box">
+                                        <form action="/auth/login" method="post">
+                                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                                            <input type="text" name="username" placeholder="username 입력해주세요.">
+                                            <input type="password" name="password" placeholder="password를 입력해주세요.">
+                                            <button type="submit">로그인</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="tab-content2" class="tab-content">
+
+                                <div id="login_box">
+                                    <div id="login_in">
+                                        <form action="/auth/login" method="post">
+                                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                                            <input type="text" name="username" placeholder="username 입력해주세요.">
+                                            <input type="password" name="password" placeholder="password를 입력해주세요.">
+                                            <button type="submit">로그인</button>
+                                        </form>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
