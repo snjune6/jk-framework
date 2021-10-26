@@ -20,4 +20,6 @@ public class SiteDto {
 	@URL
 	private String siteDomain;
 
+	private String siteCdn;
+
 }

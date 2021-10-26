@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>::<sitemesh:write property='title'/></title>
+    <title><sitemesh:write property='title'/>::${siteName}</title>
     <!-- 합쳐지고 최소화된 최신 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -51,7 +51,7 @@
                 <div id="main_t_bar">
                     <h1>
                         <a href="<c:url value="#" />">
-                            <img src="http://linkpt.cdn3.cafe24.com/logo.jpg" alt="로고">
+                            <img src="${siteCdn}/logo.jpg" alt="로고">
                         </a>
                     </h1>
 
@@ -60,14 +60,14 @@
                         <form id="top_search" method="post" action="#">
                             <div class="main_srch">
                                 <input type="text" name="keyword" id="top_keyword" class="word_div" size="40" value="">
-                                <input type="image" alt="검색버튼" src="http://linkpt.cdn3.cafe24.com/images/m_srch_btn.jpg" name="submit" value="submit" align="absmiddle" onclick="javascript:goSearch();">
+                                <input type="image" alt="검색버튼" src="${siteCdn}/images/m_srch_btn.jpg" name="submit" value="submit" align="absmiddle" onclick="javascript:goSearch();">
                             </div>
                         </form>
 
-                        <div id="word_div" class="word_div" style="text-align: left; padding: 5px; overflow: hidden scroll; height: 140px; border: 1px solid rgb(220, 220, 220); position: relative; z-index: 9999; background: url('http://linkpt.cdn3.cafe24.com/images/white.jpg'); display: none;">
+                        <div id="word_div" class="word_div" style="text-align: left; padding: 5px; overflow: hidden scroll; height: 140px; border: 1px solid rgb(220, 220, 220); position: relative; z-index: 9999; background: url('${siteCdn}/images/white.jpg'); display: none;">
                             <!-- 검색어 출력 -->
                         </div>
-                        <div id="word_div_x" class="word_div" style="text-align:right; display:none; position:relative; z-index:9999; background:url('http://linkpt.cdn3.cafe24.com/images/white.jpg') ">
+                        <div id="word_div_x" class="word_div" style="text-align:right; display:none; position:relative; z-index:9999; background:url('${siteCdn}/images/white.jpg') ">
                             <a href="#" id="word_div_close">닫기</a>
                         </div>
                         <!--//메인 상단 검색-->
@@ -243,7 +243,7 @@
                                         <p id="m_gnb_banner">
 
                                             <a href="javascript:goBanner('8', '2', '', '공정/설비 ');">
-                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/b1e1e596a76d457ab077b8e562a9948a.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/b1e1e596a76d457ab077b8e562a9948a.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
 
                                         </p>
@@ -389,7 +389,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '안전/환경 분야별배너');">
-                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/bc528121e44a4c29810734e9653e2c4e.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/bc528121e44a4c29810734e9653e2c4e.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -484,7 +484,7 @@
 
                                         <p id="m_gnb_banner">
                                             <a href="javascript:goBanner('8', '2', '', '기계');">
-                                                <img src="http://linkplantec.comhttp://linkplantec.com/upload/1/banner/ed9a55a19c254912affb9c577c6a1dfd.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
+                                                <img src="http://linkplantec.com/upload/1/banner/ed9a55a19c254912affb9c577c6a1dfd.jpg" alt="배너이미지" style="width: 291px; height: 400px;">
                                             </a>
                                         </p>
                                     </ul>
@@ -1169,7 +1169,7 @@
                 <tr>
                     <td>
                         <a href="#" target="_slef" title="새창으로 열림">
-                            <img src="http://linkpt.cdn3.cafe24.com/images/210614_popup.jpg" style="width:100%;" alt="팝업">
+                            <img src="${siteCdn}/images/210614_popup.jpg" style="width:100%;" alt="팝업">
                         </a>
                     </td>
                 </tr>
@@ -1232,7 +1232,7 @@
         <div id="m_recent_wrap">
             <div class="m_recent">
                 <p class="m_recent_tit">
-                    <img src="http://linkpt.cdn3.cafe24.com/images/m_recent_tit.jpg" alt="공지사항">
+                    <img src="${siteCdn}/images/m_recent_tit.jpg" alt="공지사항">
                 </p>
                 <p class="m_recent_con">
                     <a href="#">
@@ -1242,7 +1242,7 @@
                 </p>
                 <p class="m_recent_moreview">
                     <a href="#">
-                        <img src="http://linkpt.cdn3.cafe24.com/images/m_recent_moreview.jpg" alt="전체보기">
+                        <img src="${siteCdn}/images/m_recent_moreview.jpg" alt="전체보기">
                     </a>
                 </p>
             </div>

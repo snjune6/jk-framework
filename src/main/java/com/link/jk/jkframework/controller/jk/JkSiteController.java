@@ -30,7 +30,7 @@ public class JkSiteController {
 	private static final Logger LOGGER = LogManager.getLogger(JkSiteController.class.getName());
 
 	@GetMapping(value = "")
-	public String siteForm(HttpServletRequest request, HttpServletResponse response, Model model, Principal principal) {
+	public String siteForm(HttpServletRequest request, HttpServletResponse response, Model model) {
 
 		SiteDto siteDto = (SiteDto) request.getAttribute("siteDto");
 		model.addAttribute("siteDto", siteDto);
@@ -50,6 +50,7 @@ public class JkSiteController {
 	public String siteAction(@Valid SiteDto siteDto, Errors errors, HttpServletRequest request, HttpServletResponse response, Model model) {
 
 		List<String> siteStateList = new ArrayList<String>();
+
 		State state[] = State.values();
 		for(State i:state) {
 			siteStateList.add(String.valueOf(i));
@@ -57,21 +58,13 @@ public class JkSiteController {
 		model.addAttribute("siteStateList", siteStateList);
 
 
-		//JavaScript js = new JavaScript();
-
 		if(errors.hasErrors()) {
-			//js.setMessage("Valid Error!");
 			return "jk/site/site";
 		} else {
-
 			siteService.updateSite(siteDto);
-
-			//js.setMessage("Valid OK!");
 		}
 
-		//js.setLocation("/jk-framework/site");
-
-		//return new JavaScriptView(js);
 		return "jk/site/site";
 	}
+
 }

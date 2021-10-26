@@ -12,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
+<h4><span class="glyphicon glyphicon-pencil" aria-hidden="true"><b> 사이트관리</b></span></h4>
     <div class="well">
         <form:form modelAttribute="siteDto" cssClass="form-horizontal">
             <div class="form-group">
@@ -29,11 +30,18 @@
                         <form:errors path="siteState" />
                     </div>
             </div>
-            <div class="form-group has-error">
+            <div class="form-group">
                 <form:label path="siteDomain" cssClass="col-sm-2 control-label">siteDomain</form:label>
                 <div class="col-sm-10">
-                    <form:input path="siteDomain" cssClass="form-control has-error" />
+                    <form:input path="siteDomain" cssClass="form-control" />
                     <form:errors path="siteDomain" />
+                </div>
+            </div>
+            <div class="form-group">
+                <form:label path="siteCdn" cssClass="col-sm-2 control-label">siteCdn</form:label>
+                <div class="col-sm-10">
+                    <form:input path="siteCdn" cssClass="form-control" />
+                    <form:errors path="siteCdn" />
                 </div>
             </div>
 
@@ -44,5 +52,12 @@
             </div>
         </form:form>
     </div>
+    <script>
+        $(function(){
+            $("#siteDomain.errors").on("click", function(e){
+                console.log(e);
+            });
+        });
+    </script>
 </body>
 </html>

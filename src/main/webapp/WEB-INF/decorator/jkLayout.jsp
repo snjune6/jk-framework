@@ -37,18 +37,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사이트 관리 <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/jk-framework/site">사이트 정보</a></li>
-                            <li><a href="/jk-framework/site">사이트 수정</a></li>
-                        </ul>
-                    </li>
+                    <li class="active"><a href="/jk-framework/site">사이트 관리 <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">메뉴 관리 <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/jk-framework/site">메뉴 정보</a></li>
+                        </ul>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/jk-framework/upload">파일업로드 테스트</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -58,9 +54,9 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">${user.username} ${user.authorities}</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">KCMS 이동</a></li>
-                            <li><a href="#">MAIN 이동</a></li>
-                            <li><a href="#">LOGOUT</a></li>
+                            <li><a href="/kcms">KCMS 이동</a></li>
+                            <li><a href="/">MAIN 이동</a></li>
+                            <li><a href="/logout">LOGOUT</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -69,7 +65,10 @@
     </nav>
 
     <div class="container-fluid">
-        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true">JK</span>
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true">SITE</span>
+    </div>
+    <div class="container-fluid">
         <sitemesh:write property='body'/>
     </div>
 </body>

@@ -46,7 +46,12 @@ public class UriInterceptor implements HandlerInterceptor {
         SiteDto siteDto = siteService.selectSiteList();
 
         // 사이트 정보 입력
-        if(siteDto!=null) request.setAttribute("siteDto", siteDto);
+        if(siteDto!=null) {
+            request.setAttribute("siteName", siteDto.getSiteName());
+            request.setAttribute("siteState", siteDto.getSiteState());
+            request.setAttribute("siteDomain", siteDto.getSiteDomain());
+            request.setAttribute("siteCdn", siteDto.getSiteCdn());
+        }
 
         return HandlerInterceptor.super.preHandle(request, response, handler);
     }

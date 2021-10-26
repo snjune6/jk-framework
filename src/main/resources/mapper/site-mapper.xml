@@ -6,10 +6,11 @@
         <result column="SITE_NAME" property="siteName" />
         <result column="SITE_STATE" property="siteState" />
         <result column="SITE_DOMAIN" property="siteDomain" />
+        <result column="SITE_CDN" property="siteCdn" />
     </resultMap>
 
     <select id="selectSiteList" resultMap="siteFullList">
-        SELECT SITE_NAME, SITE_STATE, SITE_DOMAIN FROM tb_site
+        SELECT SITE_NAME, SITE_STATE, SITE_DOMAIN, SITE_CDN FROM tb_site
     </select>
 
     <update id="updateSite" parameterType="hashmap">
@@ -17,6 +18,7 @@
           SITE_NAME = #{siteName}
         , SITE_STATE = #{siteState}
         , SITE_DOMAIN = #{siteDomain}
+        , SITE_CDN = #{siteCdn}
     </update>
 
 </mapper>
