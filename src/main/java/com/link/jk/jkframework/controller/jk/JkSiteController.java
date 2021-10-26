@@ -43,7 +43,7 @@ public class JkSiteController {
 		model.addAttribute("siteStateList", siteStateList);
 
 
-		return "kcms/site/site";
+		return "jk/site/site";
 	}
 
 	@PostMapping(value = "")
@@ -61,7 +61,7 @@ public class JkSiteController {
 
 		if(errors.hasErrors()) {
 			//js.setMessage("Valid Error!");
-			return "kcms/site/site";
+			return "jk/site/site";
 		} else {
 
 			siteService.updateSite(siteDto);
@@ -72,6 +72,6 @@ public class JkSiteController {
 		//js.setLocation("/jk-framework/site");
 
 		//return new JavaScriptView(js);
-		return "kcms/site/site";
+		return "jk/site/site";
 	}
 }
