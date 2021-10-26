@@ -23,14 +23,13 @@
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/join/join.css">
 </head>
 <body>
-<div id="wrapper"><!--wrapper -->
+<div id="wrapper"  class="container-fluid" ><!--wrapper -->
     <!-- container -->
     <div id="container">
 
         <!-- header -->
         <div id="header">
-
-            <div id="header_in" style="display: block;">
+            <div id="header_in"  style="display: block;">
                 <div class="t_menu_wrap">
                     <ul class="">
                         <sec:authorize access="isAnonymous()">
