@@ -4,8 +4,10 @@ import com.link.jk.jkframework.comm.Util;
 import com.link.jk.jkframework.dto.FileDto;
 import com.link.jk.jkframework.service.FileService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +24,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@AllArgsConstructor
 @Controller
 @RequestMapping(value = "/jk-framework/upload")
 public class FileUploadController {
@@ -30,6 +31,7 @@ public class FileUploadController {
 	@Value("${spring.servlet.multipart.location}")
 	private String basePath;
 
+	@Autowired
 	private FileService fileService;
 
 	@GetMapping("")
@@ -58,10 +60,10 @@ public class FileUploadController {
 				String current_date = simpleDateFormat.format(new Date());
 				String current_date2 = simpleDateFormat2.format(new Date());
 
-				fileDto.setFilePath(current_date + File.separator);
+				fileDto.setFilePath(basePath + current_date + File.separator);
 				fileDto.setFileName(current_date2 + "");
 
-				File pathDir = new File(basePath + fileDto.getFilePath());
+				File pathDir = new File(fileDto.getFilePath());
 
 				if(!pathDir.exists()) {
 					pathDir.mkdirs();
@@ -73,7 +75,7 @@ public class FileUploadController {
 
 				file.transferTo(newFileName);
 
-				//fileService.multiUpload(fileDto);
+				fileService.multiUpload(fileDto);
 			}
 		}
 

@@ -17,7 +17,7 @@
     <div class="well">
         <ul>
             <c:forEach items="${files}" var="file" varStatus="state">
-                <li><span>${file.fileName}</span><a href="#" href="/jk-framework/upload/download">[download]</a></li>
+                <li><span>${file.fileName}_${file.originalfileName}</span><a href="#" href="/jk-framework/upload/download">[download]</a></li>
             </c:forEach>
         </ul>
     </div>

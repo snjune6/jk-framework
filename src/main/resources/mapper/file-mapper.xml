@@ -10,7 +10,7 @@
         <result column="FILE_TYPE" property="fileType" />
     </resultMap>
 
-    <insert id="multiUpload" parameterType="com.link.jk.jkframework.dto.FileDto">
+    <insert id="multiUpload" parameterType="hashmap">
         INSERT INTO tb_file
         (
             ORIGINAL_FILE_NAME,

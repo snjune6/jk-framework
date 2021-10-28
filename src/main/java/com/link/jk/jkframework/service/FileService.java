@@ -13,6 +13,6 @@ public class FileService {
 	private FileMapper fileMapper;
 
 	public void multiUpload(FileDto fileDto) {
-		//fileMapper.multiUpload(fileDto);
+		fileMapper.multiUpload(fileDto);
 	}
 }

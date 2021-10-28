@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 public interface FileMapper {
 
-    //void multiUpload(FileDto fileDto);
+    void multiUpload(FileDto fileDto);
 
 }
