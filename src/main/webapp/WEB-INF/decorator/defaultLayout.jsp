@@ -18,7 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/lib/simplePagination/simplePagination.css">
 
-    <link rel="stylesheet" type="text/css" href="/static/css/default.css">
+    <link rel="stylesheet" type="text/css" href="${siteDomain}/static/css/default.css">
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://linkplantec.com/assets/css/join/join.css">
 </head>
@@ -33,13 +33,24 @@
                 <div class="t_menu_wrap">
                     <ul class="">
                         <sec:authorize access="isAnonymous()">
-                            <li><a href="<c:url value="/auth/login" />">로그인</a></li>
+                            <li><a href="<c:url value="${siteDomain}/auth/login" />">로그인</a></li>
                         </sec:authorize>
                         <sec:authorize access="isAuthenticated()">
-                            <li><a href="<c:url value="/logout" />">로그아웃</a></li>
-                            <sec:authorize access="hasAnyRole('ROLE_MEMBER')" >
-                                <li><a href="<c:url value="#" />">마이페이지</a></li>
+
+                            <sec:authorize access="hasAnyRole('ROLE_JK')" >
+                                <li><a href="${siteDomain}${siteJk}">${siteJkNm}</a></li>
                             </sec:authorize>
+
+                            <sec:authorize access="hasAnyRole('ROLE_JK', 'ROLE_ADMIN')" >
+                                <li><a href="${siteDomain}${siteAdmin}">${siteAdminNm}</a></li>
+                            </sec:authorize>
+
+                            <sec:authorize access="hasAnyRole('ROLE_JK', 'ROLE_ADMIN', 'ROLE_MEMBER')" >
+                                <li><a href="<c:url value="${siteDomain}${siteMyPage}" />">${siteMyPageNm}</a></li>
+                            </sec:authorize>
+
+                            <li><a href="<c:url value="/logout" />">로그아웃</a></li>
+
                         </sec:authorize>
                         <li><a href="<c:url value="#" />">회사소개</a></li>
                         <li><a href="<c:url value="#" />" title="SITEMAP">SITEMAP</a></li>
@@ -50,7 +61,7 @@
             <div class="main_t_bar_wrap">
                 <div id="main_t_bar">
                     <h1>
-                        <a href="<c:url value="#" />">
+                        <a href="<c:url value="${siteDomain}" />">
                             <img src="${siteCdn}/logo.jpg" alt="로고">
                         </a>
                     </h1>

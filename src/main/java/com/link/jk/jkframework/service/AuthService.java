@@ -1,10 +1,9 @@
 package com.link.jk.jkframework.service;
 
-import com.link.jk.jkframework.comm.Util;
 import com.link.jk.jkframework.config.Role;
 import com.link.jk.jkframework.dto.UserDetailDto;
 import com.link.jk.jkframework.dto.UserDto;
-import com.link.jk.jkframework.mapper.UserMapper;
+import com.link.jk.jkframework.mapper.AuthMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,9 +19,9 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class UserService implements UserDetailsService {
+public class AuthService implements UserDetailsService {
 
-    private UserMapper userMapper;
+    private AuthMapper authMapper;
 
     public Long joinUser(UserDetailDto userDetailDto) {
 
@@ -31,13 +30,13 @@ public class UserService implements UserDetailsService {
         userDetailDto.setUserPw(passwordEncoder.encode(userDetailDto.getUserPw()));
         userDetailDto.setUserRole(Role.USER.getValue());
 
-        return userMapper.joinUser(userDetailDto);
+        return authMapper.joinUser(userDetailDto);
     }
 
     @Override
     public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
 
-        UserDto userDto = userMapper.selectUserId(userId);
+        UserDto userDto = authMapper.selectUserId(userId);
         List<GrantedAuthority> authorities = new ArrayList<>();
 
         if(userDto != null) {

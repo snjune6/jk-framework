@@ -28,9 +28,6 @@ public class IndexController {
     @GetMapping(value = "/")
     public String test(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-        SiteDto siteDto = (SiteDto) request.getAttribute("siteDto");
-        model.addAttribute("siteDto", siteDto);
-
         // 메인메뉴
         List<MenuDto> menuFullList;
         menuFullList = menuService.selectFullMenuList();

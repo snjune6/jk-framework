@@ -1,6 +1,8 @@
 package com.link.jk.jkframework.interceptor;
 
+import com.link.jk.jkframework.dto.MenuDto;
 import com.link.jk.jkframework.dto.SiteDto;
+import com.link.jk.jkframework.service.MenuService;
 import com.link.jk.jkframework.service.SiteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -9,11 +11,15 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Enumeration;
+import java.util.List;
 
 public class UriInterceptor implements HandlerInterceptor {
 
     @Autowired
     private SiteService siteService;
+
+    @Autowired
+    private MenuService menuService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -43,6 +49,9 @@ public class UriInterceptor implements HandlerInterceptor {
             }
         }
 
+
+
+
         SiteDto siteDto = siteService.selectSiteList();
 
         // 사이트 정보 입력
@@ -51,7 +60,19 @@ public class UriInterceptor implements HandlerInterceptor {
             request.setAttribute("siteState", siteDto.getSiteState());
             request.setAttribute("siteDomain", siteDto.getSiteDomain());
             request.setAttribute("siteCdn", siteDto.getSiteCdn());
+            request.setAttribute("siteJkNm", siteDto.getSiteJkNm());
+            request.setAttribute("siteJk", siteDto.getSiteJk());
+            request.setAttribute("siteAdminNm", siteDto.getSiteAdminNm());
+            request.setAttribute("siteAdmin", siteDto.getSiteAdmin());
+            request.setAttribute("siteMyPageNm", siteDto.getSiteMyPageNm());
+            request.setAttribute("siteMyPage", siteDto.getSiteMyPage());
+
         }
+
+        // 메인메뉴 정보 입력
+        List<MenuDto> menuFullList;
+        menuFullList = menuService.selectFullMenuList();
+        request.setAttribute("menuFullList", menuFullList);
 
         return HandlerInterceptor.super.preHandle(request, response, handler);
     }

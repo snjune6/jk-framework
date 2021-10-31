@@ -1,31 +1,23 @@
 package com.link.jk.jkframework.controller;
 
-import com.link.jk.jkframework.comm.Util;
-import com.link.jk.jkframework.dto.MenuDto;
 import com.link.jk.jkframework.dto.UserDetailDto;
-import com.link.jk.jkframework.service.MenuService;
-import com.link.jk.jkframework.service.UserService;
+import com.link.jk.jkframework.service.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 @AllArgsConstructor
 @Controller
 @RequestMapping(value = "/auth")
-public class UserController {
+public class AuthController {
 
-	private UserService userService;
+	private AuthService authService;
 
 	@GetMapping(value = "/login")
-	public String loginForm(Model model) {
-
+	public String loginForm() {
 
 		return "auth/login";
 	}
@@ -37,9 +29,9 @@ public class UserController {
 	}
 
 	@PostMapping(value = "/signup")
-	public String signup(UserDetailDto userDetailDto, HttpServletRequest request, HttpServletResponse response) {
+	public String signup(UserDetailDto userDetailDto) {
 
-		userService.joinUser(userDetailDto);
+		authService.joinUser(userDetailDto);
 
 		return null;
 	}

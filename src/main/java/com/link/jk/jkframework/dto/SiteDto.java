@@ -22,4 +22,13 @@ public class SiteDto {
 
 	private String siteCdn;
 
+	private String siteJkNm;
+	private String siteJk;
+
+	private String siteAdminNm;
+	private String siteAdmin;
+
+	private String siteMyPageNm;
+	private String siteMyPage;
+
 }

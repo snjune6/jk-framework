@@ -51,7 +51,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
         registry.addInterceptor(uriInterceptor())
                     .addPathPatterns("/**")
-                        .excludePathPatterns("/kcms/**", "/auth/**", "/static/**", "/error");
+                        .excludePathPatterns("/kcms/**", "/static/**", "/error");
 
     }
 }

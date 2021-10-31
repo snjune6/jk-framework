@@ -59,7 +59,7 @@
                                     링플의 원활한 서비스 제공을<br /> 위해 회원가입을 해주세요.
                                 </li>
                                 <li>
-                                    <a href="#">회원가입</a>
+                                    <a href="${siteDomain}/auth/signup">회원가입</a>
                                 </li>
                             </ul>
 

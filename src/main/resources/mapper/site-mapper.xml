@@ -7,10 +7,16 @@
         <result column="SITE_STATE" property="siteState" />
         <result column="SITE_DOMAIN" property="siteDomain" />
         <result column="SITE_CDN" property="siteCdn" />
+        <result column="SITE_JK_NM" property="siteJkNm" />
+        <result column="SITE_JK" property="siteJk" />
+        <result column="SITE_ADMIN_NM" property="siteAdminNm" />
+        <result column="SITE_ADMIN" property="siteAdmin" />
+        <result column="SITE_MY_PAGE_NM" property="siteMyPageNm" />
+        <result column="SITE_MY_PAGE" property="siteMyPage" />
     </resultMap>
 
     <select id="selectSiteList" resultMap="siteFullList">
-        SELECT SITE_NAME, SITE_STATE, SITE_DOMAIN, SITE_CDN FROM tb_site
+        SELECT * FROM tb_site
     </select>
 
     <update id="updateSite" parameterType="hashmap">
@@ -19,6 +25,12 @@
         , SITE_STATE = #{siteState}
         , SITE_DOMAIN = #{siteDomain}
         , SITE_CDN = #{siteCdn}
+        , SITE_JK_NM = #{siteJkNm}
+        , SITE_JK = #{siteJk}
+        , SITE_ADMIN_NM = #{siteAdminNm}
+        , SITE_ADMIN = #{siteAdmin}
+        , SITE_MY_PAGE_NM = #{siteMyPageNm}
+        , SITE_MY_PAGE = #{siteMyPage}
     </update>
 
 </mapper>

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface UserMapper {
+public interface AuthMapper {
 
     Long joinUser(UserDetailDto userDetailDto);
 
