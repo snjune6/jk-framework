@@ -27,7 +27,7 @@ public class UriInterceptor implements HandlerInterceptor {
         System.out.println("=========================");
         System.out.println("UriInterceptor::preHandle");
         System.out.println("UriInterceptor");
-        System.out.printf("preHandle URI : %s%n", request.getServletPath());
+        System.out.printf("UriInterceptor preHandle URI : %s%n", request.getServletPath());
         System.out.println("=========================");
 
         request.setCharacterEncoding("UTF-8");

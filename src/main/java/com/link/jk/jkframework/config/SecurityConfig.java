@@ -1,5 +1,6 @@
 package com.link.jk.jkframework.config;
 
+import com.link.jk.jkframework.config.handler.CustomLoginSuccessHandler;
 import com.link.jk.jkframework.service.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
@@ -20,6 +22,11 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private AuthService authService;
+
+    @Bean
+    public AuthenticationSuccessHandler successHandler() {
+        return new CustomLoginSuccessHandler("/");
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -37,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //.antMatchers("/member/**").authenticated()
                 //.antMatchers("/admin/**").authenticated()
                 //.antMatchers("/member/**").hasRole("MEMBER")
-                .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/kcms/**").hasAnyRole("JK", "ADMIN")
                     .antMatchers("/jk-framework/**").hasRole("JK")
                         .antMatchers("/**").permitAll();
 
@@ -45,7 +52,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/auth/login")
                     .failureUrl("/login?error=true")
                         .defaultSuccessUrl("/")
-                            .permitAll();
+                            .successHandler(successHandler())
+                                .permitAll();
 
         http.logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))

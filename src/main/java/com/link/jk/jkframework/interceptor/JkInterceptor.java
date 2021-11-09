@@ -23,7 +23,7 @@ public class JkInterceptor implements HandlerInterceptor {
         System.out.println("=========================");
         System.out.println("JkInterceptor::preHandle");
         System.out.println("JkInterceptor");
-        System.out.printf("preHandle URI : %s%n", request.getServletPath());
+        System.out.printf("JkInterceptor preHandle URI : %s%n", request.getServletPath());
         System.out.println("=========================");
 
         request.setCharacterEncoding("UTF-8");

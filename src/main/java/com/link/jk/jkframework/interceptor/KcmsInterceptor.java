@@ -22,7 +22,7 @@ public class KcmsInterceptor implements HandlerInterceptor {
         System.out.println("=========================");
         System.out.println("KcmsInterceptor::preHandle");
         System.out.println("KcmsInterceptor");
-        System.out.printf("preHandle URI : %s%n", request.getServletPath());
+        System.out.printf("KcmsInterceptor preHandle URI : %s%n", request.getServletPath());
         System.out.println("=========================");
 
         request.setCharacterEncoding("UTF-8");

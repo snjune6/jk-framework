@@ -47,11 +47,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
         registry.addInterceptor(kcmsInterceptor())
                     .addPathPatterns("/kcms/**")
-                        .excludePathPatterns("/static/**", "/error");
+                        .excludePathPatterns("/static/**", "/error", "/images", "*.jpg");
 
         registry.addInterceptor(uriInterceptor())
                     .addPathPatterns("/**")
-                        .excludePathPatterns("/kcms/**", "/static/**", "/error");
+                        .excludePathPatterns("/kcms/**", "/static/**", "/error", "/images/*", "/logo.jpg");
 
     }
 }

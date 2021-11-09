@@ -8,6 +8,7 @@ public class KcmsIndexController {
 
 	@GetMapping(value = {"/kcms", "/kcms/"})
 	public String kcmsMain() {
+		System.out.println("test--------------------------");
 		return "kcms/index";
 	}
 

@@ -4,6 +4,7 @@ import com.link.jk.jkframework.dto.CategoryDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Mapper
@@ -12,4 +13,11 @@ public interface CategoryMapper {
 
     List<CategoryDto> selectFullCategoryList();
 
+    String selectThirdId(HashMap hashMap);
+
+    List selectSecondMenu(HashMap hashMap);
+
+    List selectThirdMenu(HashMap hashMap);
+
+    List selectTagList(HashMap hashMap);
 }

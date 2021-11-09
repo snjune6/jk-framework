@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 
 @AllArgsConstructor
 @Controller
@@ -17,7 +19,10 @@ public class AuthController {
 	private AuthService authService;
 
 	@GetMapping(value = "/login")
-	public String loginForm() {
+	public String loginForm(HttpServletRequest request) {
+
+		String referer = request.getHeader("Referer");
+		request.getSession().setAttribute("prevPage", referer);
 
 		return "auth/login";
 	}
