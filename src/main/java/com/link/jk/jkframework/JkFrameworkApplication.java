@@ -3,19 +3,12 @@ package com.link.jk.jkframework;
 import com.link.jk.jkframework.config.SiteMeshConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @SpringBootApplication
-public class JkFrameworkApplication extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(JkFrameworkApplication.class);
-    }
+public class JkFrameworkApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JkFrameworkApplication.class, args);
