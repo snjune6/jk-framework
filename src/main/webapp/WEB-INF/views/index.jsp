@@ -8,6 +8,25 @@
     <title>test</title>
 </head>
 <body>
-TEST
+<sec:authorize access="isAnonymous()">
+    <li><a href="<c:url value="${siteDomain}/auth/login" />">로그인</a></li>
+</sec:authorize>
+<sec:authorize access="isAuthenticated()">
+
+    <sec:authorize access="hasAnyRole('ROLE_JK')" >
+        <li><a href="${siteDomain}${siteJk}">${siteJkNm}</a></li>
+    </sec:authorize>
+
+    <sec:authorize access="hasAnyRole('ROLE_JK', 'ROLE_ADMIN')" >
+        <li><a href="${siteDomain}${siteAdmin}">${siteAdminNm}</a></li>
+    </sec:authorize>
+
+    <sec:authorize access="hasAnyRole('ROLE_JK', 'ROLE_ADMIN', 'ROLE_MEMBER')" >
+        <li><a href="<c:url value="${siteDomain}${siteMyPage}" />">${siteMyPageNm}</a></li>
+    </sec:authorize>
+
+    <li><a href="<c:url value="/logout" />">로그아웃</a></li>
+
+</sec:authorize>
 </body>
 </html>

@@ -21,12 +21,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/static/");
     }
 
-
+/*
     @Bean
     public JkInterceptor jkInterceptor() {
         return new JkInterceptor();
     }
-
+*/
     @Bean
     public KcmsInterceptor kcmsInterceptor() {
         return new KcmsInterceptor();
@@ -39,11 +39,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-
+/*
         registry.addInterceptor(jkInterceptor())
                         .addPathPatterns("/jk-framework/**")
                             .excludePathPatterns("/static/**", "/error");
-
+*/
 
         registry.addInterceptor(kcmsInterceptor())
                     .addPathPatterns("/kcms/**")
