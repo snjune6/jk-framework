@@ -12,7 +12,7 @@
 
 
     <insert id="joinUser" parameterType="com.link.jk.jkframework.dto.UserDetailDto">
-        INSERT INTO tb_user
+        INSERT INTO TB_USER
         (
             USER_ID
             , USER_PW
@@ -30,7 +30,7 @@
         select USER_ID
             , USER_PW
             , USER_ROLE
-        from tb_user
+        from TB_USER
         where USER_ID=#{userId}
     </select>
 

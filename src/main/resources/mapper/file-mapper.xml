@@ -11,7 +11,7 @@
     </resultMap>
 
     <insert id="multiUpload" parameterType="hashmap">
-        INSERT INTO tb_file
+        INSERT INTO TB_FILE
         (
             ORIGINAL_FILE_NAME,
             FILE_NAME,

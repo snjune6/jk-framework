@@ -67,7 +67,7 @@
 
     <select id="selectFullMenuList" resultMap="menuFullList">
         SELECT *
-            FROM tb_menu
+            FROM TB_MENU
             WHERE MENU_DELETE IS NULL
             ORDER BY MENU_SORT ASC
     </select>

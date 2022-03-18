@@ -18,7 +18,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
 @AllArgsConstructor
-//@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private AuthService authService;
@@ -41,9 +40,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                //.antMatchers("/member/**").authenticated()
-                //.antMatchers("/admin/**").authenticated()
-                //.antMatchers("/member/**").hasRole("MEMBER")
                 .antMatchers("/kcms/**").hasAnyRole("JK", "ADMIN")
                     .antMatchers("/jk-framework/**").hasRole("JK")
                         .antMatchers("/**").permitAll();

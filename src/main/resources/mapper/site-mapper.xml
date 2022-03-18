@@ -16,11 +16,11 @@
     </resultMap>
 
     <select id="selectSiteList" resultMap="siteFullList">
-        SELECT * FROM tb_site
+        SELECT * FROM TB_SITE
     </select>
 
     <update id="updateSite" parameterType="hashmap">
-        UPDATE tb_site SET
+        UPDATE TB_SITE SET
           SITE_NAME = #{siteName}
         , SITE_STATE = #{siteState}
         , SITE_DOMAIN = #{siteDomain}

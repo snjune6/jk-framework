@@ -18,7 +18,7 @@
 
     <select id="selectFullCategoryList" resultMap="categoryFullList">
         SELECT *
-            FROM tb_category
+            FROM TB_CATEGORY
         WHERE CATEGORY_DEL = 0
         AND CATEGORY_MAIN = 1
         AND CATEGORY_STEP != 0
